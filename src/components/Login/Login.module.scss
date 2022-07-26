@@ -1,0 +1,23 @@
+.parent{
+  @apply flex justify-start items-center flex-col h-screen;
+
+  .inner {
+    @apply relative w-full h-full;
+
+    .video{
+      @apply w-full h-full object-cover;
+    }
+
+    .logo{
+      @apply absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 bg-blackOverlay;
+
+      .inner_logo{
+        @apply p-5;
+      }
+    }
+
+    .google_button{
+      @apply shadow-2xl;
+    }
+  }
+}
