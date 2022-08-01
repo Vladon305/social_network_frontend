@@ -1,11 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Login.module.scss'
+import video from '../../assets/share.mp4'
 import jwt_decode from 'jwt-decode'
 import { GoogleLogin } from '@react-oauth/google'
 import { IdentifiedSanityDocumentStub } from '@sanity/client'
 import { DecodedResponseData } from '../../types/types'
-import { createUserIfNotExistsAPI } from '../../api/api'
+import { Api } from '../../api/api'
 
 const Login: React.FC = () => {
 
@@ -21,10 +22,10 @@ const Login: React.FC = () => {
       _id: sub,
       _type: 'user',
       userName: name,
-      image: picture
+      ava: picture
     }
 
-    createUserIfNotExistsAPI(doc).then(() => {
+    Api.createIfNotExists(doc).then(() => {
       navigate('/', { replace: true })
     })
   }
@@ -32,7 +33,7 @@ const Login: React.FC = () => {
     <div className={styles.parent}>
       <div className={styles.inner}>
         <video
-          // src={shareVideo}
+          src={video}
           loop
           controls={false}
           muted

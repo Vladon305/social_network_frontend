@@ -1,0 +1,39 @@
+.parent{
+  @apply flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out;
+
+  .closedSidebar{
+    @apply hidden md:flex h-screen flex-initial;
+  }
+
+  .layout{
+    @apply flex md:hidden flex-row;
+
+    .header{
+      @apply p-2 w-full flex flex-row justify-between items-center shadow-md;
+
+      .openButton{
+        @apply cursor-pointer;
+      }
+
+      .logo{
+        @apply w-28;
+      }
+    }
+
+    .openedSidebar{
+      @apply fixed w-4/5 bg-white h-screen overflow-y-auto shadow-md z-20 animate-slide-in;
+      
+      .closeButton{
+        @apply absolute w-full flex justify-end items-center p-2;
+
+        .closeButtonContent{
+          @apply cursor-pointer;
+        }
+      }
+    }
+  }
+
+  .main{
+    @apply pb-2 flex-1 h-screen
+  }
+}

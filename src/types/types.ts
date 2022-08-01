@@ -9,7 +9,7 @@ export type User = {
   email: string
   gender: string
   userName: string
-  ava: string
+  ava: Image
   birthDate: string
   images: Image[]
   friends: UserRef[]

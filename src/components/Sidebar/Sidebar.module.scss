@@ -1,0 +1,36 @@
+.parent {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @apply flex flex-col justify-between bg-white h-full overflow-y-scroll min-w-210;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  .header {
+    @apply flex flex-col;
+
+    .link__logo {
+      @apply flex px-5 gap-2 my-6 pt-1 w-190 items-center;
+
+      .logo {
+        @apply w-full;
+      }
+    }
+
+    .link__container {
+      @apply flex flex-col gap-5;
+    }
+  }
+
+  .footer {
+    @apply flex items-center my-5 mb-3 gap-2 p-2 bg-white rounded-lg shadow-lg mx-3;
+
+    .profile__logo {
+      @apply w-10 h-10 rounded-full;
+    }
+  }
+}

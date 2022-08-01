@@ -5,7 +5,7 @@ import { Image } from './types/types'
 export const client = sanityClient({
   projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
   dataset: 'production',
-  apiVersion: '2022-07-26',
+  apiVersion: '2022-07-04',
   useCdn: true,
   token: process.env.REACT_APP_SANITY_TOKEN,
   ignoreBrowserTokenWarning: true
