@@ -15,7 +15,11 @@ export const Api = {
     return await client.createIfNotExists(doc)
   },
 
-  async patch(
+  async patch(documentId: string, data: AttributeSet) {
+    return await client.patch(documentId).set(data).commit()
+  },
+
+  async patchInArray(
     documentId: string,
     attrs: AttributeSet,
     inserting: { at: 'replace' | 'before' | 'after'; selector: string; items: any[] }

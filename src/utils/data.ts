@@ -1,4 +1,6 @@
-export const userQuery = (userId: string | number) => {
+import { Params } from 'react-router-dom'
+
+export const userQuery = (userId: string | Readonly<Params<string>>) => {
   const query = `*[_type == "user" && _id == '${userId}']`
 
   return query

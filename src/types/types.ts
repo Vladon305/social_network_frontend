@@ -7,6 +7,7 @@ export type User = {
   city: string
   country: string
   email: string
+  status: string
   gender: string
   userName: string
   ava: Image
