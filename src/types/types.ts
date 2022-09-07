@@ -13,8 +13,11 @@ export type User = {
   ava: Image
   birthDate: string
   images: Image[]
-  friends: UserRef[]
+  posts: Post[]
+  friends: User[]
   dialogs: Dialog[]
+  isOnline: boolean
+  whenOnline: string
 }
 
 export type Image = {
@@ -48,6 +51,27 @@ export type Dialog = {
   userId: string
   userTo: UserRef
   _updatedAt: Date
+}
+
+export type Post = {
+  title: string
+  text: string
+  image?: string
+  userId: string
+  postedBy: UserRef
+  likes: UserRef[]
+  saves: Save[]
+  comments: Comment[]
+}
+
+export type Comment = {
+  postedBy: UserRef
+  comment: string
+}
+
+export type Save = {
+  postedBy: UserRef
+  userId: string
 }
 
 export type DecodedResponseData = {

@@ -6,6 +6,14 @@ export const userQuery = (userId: string | Readonly<Params<string>>) => {
   return query
 }
 
+export const userFriendsQuery = (userId: string | Readonly<Params<string>>) => {
+  const query = `*[_type == "user" && _id == 'drafts.${userId}']{
+    friends[]->
+  }`
+
+  return query
+}
+
 export const searchQuery = (searchTerm: string) => {
   const query = `*[_type =="pin" && title match '${searchTerm}*' || category match '${searchTerm}*' || about match '${searchTerm}*']{
   image {

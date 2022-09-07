@@ -45,9 +45,10 @@ module.exports = {
         navColor: '#BEBEBE',
       },
       backgroundColor: {
-        mainColor: '#FBF8F9',
-        secondaryColor: '#F0F0F0',
+        mainColor: '#edf7fa',
+        secondaryColor: '#e5ecef',
         blackOverlay: 'rgba(0, 0 ,0 ,0.7)',
+        blackColor: '',
       },
       keyframes: {
         'slide-in': {

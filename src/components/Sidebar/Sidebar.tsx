@@ -9,7 +9,7 @@ import { FiSettings } from 'react-icons/fi'
 import { User } from '../../types/types'
 import styles from './Sidebar.module.scss'
 import photo from '../../assets/user.webp'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo2.svg'
 import { urlFor } from '../../client'
 import SidebarLink from '../SidebarLink/SidebarLink'
 
@@ -26,8 +26,8 @@ const Sidebar: React.FC<PropsType> = ({ user, closeSidebar }) => {
   return (
     <div className={styles.parent}>
       <div className={styles.header}>
-        <Link to='/' className={styles.link__logo} onClick={handleCloseSidebar}>
-          <img src={logo} alt='logo' className={styles.logo} />
+        <Link to="/" className={styles.link__logo} onClick={handleCloseSidebar}>
+          <img src={logo} alt="logo" className={styles.logo} />
         </Link>
         <div className={styles.link__container}>
           <SidebarLink title={'News'} path={'/'} Icon={BiNews} handleCloseSidebar={handleCloseSidebar} />
@@ -46,7 +46,7 @@ const Sidebar: React.FC<PropsType> = ({ user, closeSidebar }) => {
         <Link to={`Profile/${user._id}`} className={styles.footer} onClick={handleCloseSidebar}>
           <img
             src={user.ava ? urlFor(user?.ava)?.width(50)?.url() : photo}
-            alt='Profile'
+            alt="Profile"
             className={styles.profile__logo}
           />
           <p>{user.userName}</p>

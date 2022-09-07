@@ -1,39 +1,50 @@
-.parent{
-  @apply flex bg-gray-50 md:flex-row flex-col h-screen transition-height duration-75 ease-out;
+.parent {
+  @apply flex bg-white md:flex-row flex-col h-screen transition-height duration-75 ease-out;
 
-  .closedSidebar{
+  .closedSidebar {
     @apply hidden md:flex h-screen flex-initial;
   }
 
-  .layout{
+  .layout {
     @apply flex md:hidden flex-row;
 
-    .header{
+    .header {
       @apply p-2 w-full flex flex-row justify-between items-center shadow-md;
 
-      .openButton{
+      .openButton {
         @apply cursor-pointer;
       }
 
-      .logo{
-        @apply w-28;
+      .link__logo {
+        @apply flex w-28;
+
+        .logo {
+          @apply w-28;
+        }
+      }
+
+      .link__ava {
+        @apply rounded-full overflow-hidden w-24;
+
+        .ava {
+        }
       }
     }
 
-    .openedSidebar{
+    .openedSidebar {
       @apply fixed w-4/5 bg-white h-screen overflow-y-auto shadow-md z-20 animate-slide-in;
-      
-      .closeButton{
+
+      .closeButton {
         @apply absolute w-full flex justify-end items-center p-2;
 
-        .closeButtonContent{
+        .closeButtonContent {
           @apply cursor-pointer;
         }
       }
     }
   }
 
-  .main{
-    @apply pb-2 flex-1 h-screen
+  .main {
+    @apply pb-2 flex-1 h-screen;
   }
 }

@@ -1,0 +1,14 @@
+.friend {
+  @apply flex flex-col justify-center items-center;
+
+  .ava {
+    @apply w-12 rounded-full overflow-hidden;
+
+    .image {
+      @apply w-full;
+    }
+  }
+
+  .name {
+  }
+}

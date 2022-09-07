@@ -1,0 +1,130 @@
+.profile {
+  @apply relative pb-2 h-full justify-center items-center;
+
+  .profile_inner {
+    @apply flex flex-col pb-5;
+
+    .profile__banner {
+      @apply relative flex flex-col mb-7 rounded-md;
+
+      .banner {
+        @apply flex flex-col justify-center items-center rounded-lg overflow-hidden;
+
+        .banner__image {
+          @apply w-full h-370 2xl:h-510 shadow-lg object-cover;
+        }
+      }
+    }
+
+    .content {
+      @apply flex;
+
+      .leftPart {
+        @apply mr-2 rounded-md;
+
+        .settings {
+          @apply p-3 w-auto;
+
+          .ava {
+            @apply mb-2 rounded-lg shadow-xl object-cover;
+          }
+
+          .settings__button {
+            @apply w-full flex justify-center items-center text-xl bg-mainColor shadow-xl rounded-xl;
+          }
+        }
+
+        .friends {
+          @apply mt-4 flex flex-col justify-center items-center;
+
+          .friends__inner {
+            @apply my-3;
+            .title {
+              @apply font-bold;
+
+              span {
+                @apply text-gray-500;
+              }
+            }
+
+            .friends__content {
+              @apply my-3 grid grid-cols-3;
+            }
+          }
+        }
+      }
+
+      .rightPart {
+        @apply ml-2 flex-auto;
+
+        .info {
+          @apply p-6;
+
+          .info__header {
+            @apply pb-3 border-b border-black;
+
+            .name {
+              @apply text-3xl mt-3 flex justify-between;
+
+              .whenOnline {
+                @apply text-lg;
+              }
+            }
+          }
+
+          .info__main {
+            @apply my-3;
+
+            div {
+              @apply my-1;
+            }
+
+            .birthDate {
+              @apply flex;
+
+              h3 {
+                @apply w-24;
+              }
+
+              div {
+                @apply font-bold;
+              }
+            }
+
+            .city {
+              @apply flex;
+
+              h3 {
+                @apply w-24;
+              }
+
+              div {
+                @apply font-bold;
+              }
+            }
+          }
+
+          .info__footer {
+            @apply mt-3 pt-3 flex justify-around items-center border-t border-black;
+
+            .item {
+              @apply flex flex-col justify-center items-center;
+
+              div {
+                @apply font-bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.block {
+  @apply bg-secondaryColor rounded-lg;
+}
+
+.border {
+  @apply border-b border-black;
+}

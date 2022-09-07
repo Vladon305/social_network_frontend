@@ -6,7 +6,7 @@ import styles from './Home.module.scss'
 
 import Sidebar from '../Sidebar/Sidebar'
 import photo from '../../assets/user.webp'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo2.svg'
 import { fetchUser } from '../../utils/fetchUser'
 import { urlFor } from '../../client'
 import { getUser } from '../../store/user/reducers'
@@ -36,11 +36,11 @@ const Home: React.FC<Props> = ({ user }) => {
       <div className={styles.layout}>
         <div className={styles.header}>
           <HiMenu fontSize={40} onClick={() => setToggleSidebar(true)} />
-          <Link to='/'>
-            <img src={logo} alt='logo' className={styles.logo} />
+          <Link to="/" className={styles.link__logo}>
+            <img src={logo} alt="logo" className={styles.logo} />
           </Link>
-          <Link to={`Profile/${user?._id}`}>
-            <img src={user.ava ? urlFor(user?.ava)?.width(50)?.url() : photo} alt='Profile' className={styles.logo} />
+          <Link to={`Profile/${user?._id}`} className={styles.link__ava}>
+            <img src={user?.ava ? urlFor(user?.ava)?.width(50)?.url() : photo} alt="Profile" className={styles.ava} />
           </Link>
         </div>
         {toggleSidebar && (

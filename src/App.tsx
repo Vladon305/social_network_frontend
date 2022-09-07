@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
-import Login from './components/Login/Login'
+import Login from './pages/Login/Login'
 import HomeContainer from './components/Home/HomeContainer'
 import { fetchUser } from './utils/fetchUser'
 
@@ -16,8 +16,8 @@ const App: React.FC = () => {
 
   return (
     <Routes>
-      <Route path='login' element={<Login />} />
-      <Route path='/*' element={<HomeContainer />} />
+      <Route path="login" element={<Login />} />
+      <Route path="/*" element={<HomeContainer />} />
     </Routes>
   )
 }

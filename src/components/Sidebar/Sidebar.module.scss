@@ -4,7 +4,7 @@
     display: none;
   }
 
-  @apply flex flex-col justify-between bg-white h-full overflow-y-scroll min-w-210;
+  @apply flex flex-col justify-between bg-mainColor h-full overflow-y-scroll min-w-210;
 
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none; /* IE and Edge */
